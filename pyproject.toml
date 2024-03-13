@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools >= 65.5"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'pyemprop'
+authors = [
+    {name = "Mateusz Surma"},
+]
+description = "Python scripts for electromagnetic wave propagation"
+dependencies = [
+    "numpy",
+    "scipy",
+    "tqdm",
+    "matplotlib",
+    "pandas",
+    "click"
+]
+readme = "README.md"
+license = {text = "GPL v3"}
+dynamic = ["version"]
+
+[project.scripts]
+pyemprop = "pyemprop:cli"
+
+[tool.setuptools.packages.find]
+exclude = ["test"]
+
+[tool.setuptools.dynamic]
+version = {attr = "pyemprop.__version__"}

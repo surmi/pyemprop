@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+scipy = "*"
+tqdm = "*"
+matplotlib = "*"
+pandas = "*"
+click = "*"
+pyemprop = {file = ".", editable = true}
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
